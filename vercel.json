@@ -1,0 +1,14 @@
+{
+    "builds": [
+      {
+        "src": "hridayam/wsgi.py",
+        "use": "@vercel/python"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "hridayam/wsgi.py"
+      }
+    ]
+}
