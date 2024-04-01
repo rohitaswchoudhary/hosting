@@ -1,0 +1,31 @@
+{% load static %}
+
+<div id="bkgOverlay" class="backgroundOverlay"></div>
+  
+<div id="delayedPopup" class="delayedPopupWindow">
+  <!-- This is the close button -->
+  <a href="#" id="btnClose" title="Click here to close this deal box.">[ X ]</a>
+  <!-- This is the left side of the popup for the description -->
+  <div class="formDescription">
+    <h2>Hridayam<span style="color: #40c348; font-weight: bold;"><br>Get Quote</span></h2>
+    <p>|Wedding photography| Pre-wedding| Post wedding| Baby shoots</p>
+  </div>
+  <!-- Begin MailChimp Signup Form -->
+  <div id="mc_embed_signup">
+    <div class="col-md-12 ma_bottom30">
+        <div class="lightbox">
+           <img src="{% static "images\CD3_0886 1.jpg" %}" alt="Bridge">
+           <div class="view_main">
+              <h3>Couple</h3>
+              <a class="view_btn" href="{% static "images/CD3_0886 1.jpg" %}"><i class="fa fa-search-plus" aria-hidden="true"></i></a>
+           </div>
+        </div>
+    </div>
+    <a href="{% url 'gallery' %}">
+        <div class="clear">
+            <input type="submit" value="Contact Us!" name="subscribe" id="mc-embedded-subscribe" class="button">
+        </div>
+    </a>
+  </div>
+  <!-- End MailChimp Signup Form -->
+</div>

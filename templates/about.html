@@ -1,0 +1,32 @@
+{% extends "base.html" %} 
+{% load static %}
+{% block title %}About{% endblock %}
+ 
+{% block content %}
+{% include "navbar.html" %}
+
+<!-- about -->
+<div class="about">
+    <div class="container">
+       <div class="row">
+          <div class="col-md-12">
+             <div class="titlepage text_align_center">
+                <h2>About Us</h2>
+             </div>
+          </div>
+          <div class="col-md-8 offset-md-2">
+            {% for items in contents %}
+             <div class="about_img text_align_center">
+               <figure><img src="{{items.about_img.url}}" alt="#"/></figure>
+                <h1 style="font-size: xx-large; font-weight: bolder;">Hridayam: Where Every Frame Tells a Story</h1>
+                <p style="font-size: large; font-weight: bolder;">Since our inception in 2016 with a humble team of three, Hridyam Photography has evolved into a thriving family, capturing cherished moments across a spectrum of occasions—weddings, birthdays, commercial shoots, portfolios, cinematic videos, anniversaries, and beyond. While our roots lie in Kolkata, our clientele spans the entire country. At Hridyam, we take pride in our distinctive and personalized approach to every event we undertake. With a dedicated team assigned to each assignment, we ensure the best results for your memorable moments. Trust us to turn your special occasions into timeless memories. That’s Why Our tagline is “ The Soul Story”
+                </p>
+                <!-- <a class="read_more" href="about.html">About More</a> -->
+             </div>
+             {% endfor %}
+          </div>
+       </div>
+    </div>
+ </div>
+ <!-- end about -->
+ {% endblock %}

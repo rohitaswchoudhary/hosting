@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'contact.css' %}">
+
+
+{% block title%}Contact{%endblock%}
+
+{% block content %}
+{% include "navbar.html" %}
+<!-- contact -->
+
+<div class="contact">
+   <div class="container-fluid">
+      <div class="row ">
+         <div class="col-md-12">
+            <div class="titlepage text_align_center">
+               <h2>Thanks for contacting Us!!</h2>
+               <br>
+               <br>
+               <h3>We will Get back to you Soon...</h3>
+            </div>
+         </div>
+         
+      </div>
+   </div>
+</div>
+{% endblock %}

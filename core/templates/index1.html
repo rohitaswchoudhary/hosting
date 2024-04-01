@@ -1,0 +1,557 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>Hridyam|Wedding photography| Pre-wedding| Post wedding| Baby shoots</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" >
+      <!-- style css -->
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+      <!-- fevicon -->
+      <link rel="icon" href="{% static 'images/hridayam-Logo-2.png' %}" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="{% static 'css/jquery.mCustomScrollbar.min.css' %}">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+      <link rel="stylesheet" href="https://rawgit.com/LeshikJanz/libraries/master/Bootstrap/baguetteBox.min.css">
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+   </head>
+   
+   <!-- body -->
+   <body class="main-layout">
+      <!-- loader  -->
+      <div class="loader_bg">
+         <div class="loader"><img src="{% static 'images/loading.gif' %}" alt="#"/></div>
+      </div>
+      <!-- end loader -->
+      <!-- top -->
+      {% for items in contents %}
+      <div class="full_bg">
+         <!-- header inner -->
+         <div class="top_section">
+            <div class="container-fluid">
+               <div class="row">
+                  <div class=" col-md-2 col-sm-3 col logo_section">
+                     <div class="full">
+                        <div class="center-desk">
+                           <div class="logo">
+                              <a href="index.html"><img src="{{ items.hero_image.url}}" alt="#" /></a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- end header inner -->
+         <!-- end header -->
+         <div class="slider_main">
+            <div class="container-fluid">
+               <div class="row">
+                  <div class="col-md-8">
+                     <!-- carousel code -->
+                     <div id="carouselExampleIndicators" class="carousel slide">
+                        <ol class="carousel-indicators">
+                           <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                           <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                           <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                           <!-- first slide -->
+                           <div class="carousel-item active">
+                              <div class="carousel-caption d-md-block cuplle">
+                                 <h3 data-animation="animated bounceInLeft">
+                                    <u>Hridyam</u> 
+                                 </h3>
+                                 <h3 data-animation="animated bounceInLeft">
+                                    Where Every Frame Tells a Story
+                                 </h3>
+                                 <h3 data-animation="animated bounceInLeft">
+                                    
+                                 </h3>
+                                 <button class="btn btn-primary  read_more whitebg" data-animation="animated bounceInLeft">Contact Us</button>
+                              </div>
+                           </div>
+                           <!-- second slide -->
+                           <div class="carousel-item">
+                              <div class="carousel-caption d-md-block cuplle">
+                                 <h3 data-animation="animated bounceInLeft">
+                                    <u>Hridyam</u>
+                                 </h3>
+                                 <h3 data-animation="animated bounceInLeft">
+                                    Capturing Love's Timeless Moments
+                                 </h3>
+                                 <h3 data-animation="animated bounceInLeft">
+                                    
+                                 </h3>
+                                 <button class="btn btn-primary  read_more whitebg" data-animation="animated bounceInLeft">Contact Us</button>
+                              </div>
+                           </div>
+                           <!-- third slide -->
+                           <div class="carousel-item">
+                              <div class="carousel-caption d-md-block cuplle">
+                                 <h3 data-animation="animated bounceInLeft">
+                                    <u>Hridyam</u>
+                                 </h3>
+                                 <h3 data-animation="animated bounceInLeft">
+                                    CINEMATIC WEDDING VIDEO 
+                                 </h3>
+                                 <h3 data-animation="animated bounceInLeft">
+                                    
+                                 </h3>
+                                 <button class="btn btn-primary  read_more whitebg" data-animation="animated bounceInLeft">Contact Us</button>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- controls -->
+                        <!-- <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <i class="fa fa-angle-left" aria-hidden="true"></i>
+                        <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        <span class="sr-only">Next</span>
+                        </a> -->
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      {% endfor %}
+      <!-- end banner -->
+      <div id="myHeader" class="header diki">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-10 col-sm-12">
+                  <nav class="navigation navbar navbar-expand-md navbar-dark ">
+                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+                     <span class="navbar-toggler-icon"></span>
+                     </button>
+                     <div class="collapse navbar-collapse" id="navbarsExample04">
+                        <ul class="navbar-nav mr-auto">
+                           <li class="nav-item active">
+                              <a class="nav-link" href="index.html">Home</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link" href="about.html">About</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link" href="services.html">Services</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link" href="gallery.html">Gallery</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link" href="cinema.html">Cinema</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link" href="contact.html">Contact Us</a>
+                           </li>
+                        </ul>
+                     </div>
+                  </nav>
+               </div>
+               <div class="col-md-2">
+                  <div class="sealo">
+                     <ul>
+                        <!-- <li><a href="Javascript:void(0)"><i class="fa fa-search"></i></a></li> -->
+                        <li><a href="Javascript:void(0)">Login</a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- about -->
+      <div class="about">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="titlepage text_align_center">
+                     <h2>About Us</h2>
+                  </div>
+               </div>
+               <div class="col-md-10 offset-md-1">
+                  <div class="about_img text_align_center">
+                     <figure><img src="images/CD3_6775.webp" alt="#"/></figure>
+                  </div>
+               </div>
+               <div class="col-md-8 offset-md-2">
+                  <div class="about_img text_align_center">
+                     <p>Since our inception in 2016 with a humble team of three, Hridyam Photography has evolved into a thriving family, capturing cherished moments across a spectrum of occasions—weddings, birthdays, commercial shoots, portfolios, cinematic videos, anniversaries, and beyond. While our roots lie in Kolkata, our clientele spans the entire country. At Hridyam, we take pride in our distinctive and personalized approach to every event we undertake. With a dedicated team assigned to each assignment, we ensure the best results for your memorable moments. Trust us to turn your special occasions into timeless memories. That’s Why Our tagline is “ The Soul Story”
+                     </p>
+                     <a class="read_more" href="about.html">About More</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- end about -->
+      <!-- couple -->
+      <div class="couple">
+         <div class="container-fluid">
+            <div class="row">
+               <div class="col-md-7">
+                  <div class="titlepage text_align_left">
+                     <span>Our introduction</span>
+                     <h2>Meet Happy Couple</h2>
+                     <p>At Hridyam Photography, our clients' joy is our ultimate reward. We have had the privilege of capturing and immortalizing their most cherished moments, ranging from the blissful union of marriage to the celebration of anniversaries, baby showers, and more. The heartfelt gratitude and thanks expressed by our clients stand as a testament to the trust they place in us to encapsulate their precious memories. Join the ranks of our satisfied clients and let us turn your special moments into everlasting treasures.
+                     </p>
+                     <a class="read_more whitebg" href="Javascript:void(0)">See More</a>
+                  </div>
+               </div>
+               <div class="col-md-5">
+                  <div class="doi">
+                     <figure><img src="{{cont.about_img.url}}" alt="#"/></figure>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- couple -->
+      <!-- gallery -->
+      <div class="gallery">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="titlepage">
+                     <h2>Our Gallery</h2>
+                  </div>
+               </div>
+            </div>
+            {% for items in gallery %}
+            <div class="tz-gallery">
+               <div class="row">
+                  <div class="col-md-4">
+                     <div class="row">
+                        <div class="col-md-12 ma_bottom30">
+                           <div class="lightbox">
+                              <img src="{{ items.image.url }}" alt="Bridge">
+                              <div class="view_main">
+                                 <h3>Couple</h3>
+                                 <a class="view_btn" href="{{ items.image.url }}"><i class="fa fa-search-plus" aria-hidden="true"></i></a>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-md-12 ma_bottom30">
+                           <div class="lightbox">
+                              <img src="images/CD3_2245 (1).webp " alt="Bridge">
+                              <div class="view_main">
+                                 <h3>Couple</h3>
+                                 <a class="view_btn" href="images/CD3_2245 (1).webp"><i class="fa fa-search-plus" aria-hidden="true"></i></a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-md-4">
+                     <div class="row">
+                        <div class="col-md-12 ma_bottom30">
+                           <div class="lightbox">
+                              <img src="images/CD3_6775.webp" alt="Bridge">
+                              <div class="view_main">
+                                 <h3>Couple</h3>
+                                 <a class="view_btn" href="images/CD3_6775.webp"><i class="fa fa-search-plus" aria-hidden="true"></i></a>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-md-12 ma_bottom30">
+                           <div class="lightbox">
+                              <img src="images/CD3_2245 (1).webp" alt="Bridge">
+                              <div class="view_main">
+                                 <h3>Couple</h3>
+                                 <a class="view_btn" href="images/_J2A1702 1.webp"><i class="fa fa-search-plus" aria-hidden="true"></i></a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-md-4">
+                     <div class="row">
+                        <div class="col-md-12 ma_bottom30">
+                           <div class="lightbox">
+                              <img src="images/J2A1692-1-1.webp" alt="Bridge">
+                              <div class="view_main">
+                                 <h3>Couple</h3>
+                                 <a class="view_btn" href="images/_J2A1692 1-1.webp"><i class="fa fa-search-plus" aria-hidden="true"></i></a>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-md-12 ma_bottom30">
+                           <div class="lightbox">
+                              <img src="images/CD3_2296.webp" alt="Bridge">
+                              <div class="view_main">
+                                 <h3>Couple</h3>
+                                 <a class="view_btn" href="images/CD3_2296.webp"><i class="fa fa-search-plus" aria-hidden="true"></i></a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-md-12">
+                     <a class="read_more" href="about.html">About More</a>
+                     <p class="text_align_center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe asperiores similique ab ipsa sint reprehenderit itaque magnam exercitationem, eligendi numquam necessitatibus aliquam quidem magni eius accusantium quas nostrum dolorem omnis!</p>
+                  </div>
+               </div>
+            </div>
+            {% endfor %}
+         </div>
+      </div>
+      <!-- end gallery -->
+      <!-- couple -->
+      <div class="couple">
+         <div class="container-fluid">
+            <div class="row">
+               <div class="col-md-7">
+                  <div class="titlepage text_align_left">
+                     <span>Our footprints</span>
+                     <h2>Meet Happy Couple</h2>
+                     <div id="projectFacts" class="sectionClass">
+                        <div class="fullWidth eight columns">
+                            <div class="projectFactsWrap ">
+                                <div class="item wow fadeInUpBig animated animated" data-number="12" style="visibility: visible;">
+                                    <i class="fa fa-heart"></i>
+                                    <p id="number1" class="number">12</p>
+                                    <span></span>
+                                    <p>Weddings</p>
+                                </div>
+                                <div class="item wow fadeInUpBig animated animated" data-number="55" style="visibility: visible;">
+                                    <i class="fa fa-smile-o"></i>
+                                    <p id="number2" class="number">55</p>
+                                    <span></span>
+                                    <p>Happy clients</p>
+                                </div>
+                                <div class="item wow fadeInUpBig animated animated" data-number="359" style="visibility: visible;">
+                                    <i class="fa fa-video-camera"> </i>
+                                    <p id="number3" class="number">359</p>
+                                    <span></span>
+                                    <p>VIDEOS PRODUCED</p>
+                                </div>
+                                <div class="item wow fadeInUpBig animated animated" data-number="246" style="visibility: visible;">
+                                    <i class="fa fa-camera"></i>
+                                    <p id="number4" class="number">246</p>
+                                    <span></span>
+                                    <p>PHOTOS DELIVERED</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <a class="read_more whitebg" href="Javascript:void(0)">See More</a>
+                  </div>
+               </div>
+               <div class="col-md-5">
+                  <div class="doi">
+                     <figure><img src="images/J2A1702-1.webp" alt="#"/></figure>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- couple -->
+      <!-- contact -->
+      <div class="contact">
+         <div class="container-fluid">
+            <div class="row ">
+               <div class="col-md-12">
+                  <div class="titlepage text_align_center">
+                     <h2>Contact Us</h2>
+                  </div>
+               </div>
+               <div class="col-md-6">
+                  <div class="mapimg">
+                     <figure><img src="images/map.png" alt="#"/></figure>
+                  </div>
+               </div>
+               <div class="col-md-6">
+                  <form id="request" class="main_form">
+                     <div class="row">
+                        <div class="col-md-6 ">
+                           <label>Name</label>
+                           <input class="contactus" placeholder="" type="type" name=" Name"> 
+                        </div>
+                        <div class="col-md-6">
+                           <label>Phone Number</label>
+                           <input class="contactus" placeholder="" type="type" name="Phone Number">                          
+                        </div>
+                        <div class="col-md-12">
+                           <label>Email</label>
+                           <input class="contactus" placeholder="" type="type" name="Email"> 
+                        </div>
+                        <div class="col-md-12">
+                           <label>Message</label>
+                           <textarea class="textarea" placeholder="" type="type" Message="Name"></textarea>
+                        </div>
+                        <div class="col-md-12">
+                           <button class="send_btn">Send</button>
+                        </div>
+                     </div>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- contact -->
+      <!--  footer -->
+      <footer>
+         <div class="footer">
+            <div class="container">
+               <div class="row border_bo1 ">
+                  <div class="col-md-4">
+                     <a class="logof" href="index.html"><img src="images/hridayam-Logo-2.png" alt="#"/></a> 
+                     <form class="form_subscri">
+                        <div class="row">
+                           <div class="col-md-12">
+                              <h3>Subscribe Now</h3>
+                           </div>
+                           <div class="col-md-12">
+                              <input class="subsrib" placeholder="Enter your email" type="text" name="Enter your email">
+                           </div>
+                           <div class="col-md-12">
+                              <button class="subsci_btn">subscribe</button>
+                           </div>
+                        </div>
+                     </form>
+                  </div>
+                  <div class="col-lg-2 col-md-4 col-sm-6">
+                     <div class="infoma">
+                        <h3>Information</h3>
+                        <ul>
+                           <li>Hridyam , Where Every Frame Tells a Story.</li>
+                           <!-- <li>variations of pas</li>
+                           <li>sages of Lorem  </li>
+                           <li>psum available,  </li>
+                           <li>but the majority  </li>
+                           <li>have suffered  </li> -->
+                        </ul>
+                     </div>
+                  </div>
+                  <div class="col-lg-2 col-md-4 col-sm-6">
+                     <div class="infoma">
+                        <h3>Helpful Links</h3>
+                        <ul>
+                           <li>There are many </li>
+                           <li>variations of pas</li>
+                           <li>sages of Lorem  </li>
+                           <li>psum available,  </li>
+                           <li>but the majority  </li>
+                        </ul>
+                     </div>
+                  </div>
+                  <div class="col-lg-2 col-md-4 col-sm-6">
+                     <div class="infoma">
+                        <h3>Our Weddings</h3>
+                        <ul>
+                           <li><a style="color: aliceblue;" href="#gallery">Gallery</a></li>
+                           <li>variations of pas</li>
+                           <li>sages of Lorem  </li>
+                           <li>psum available,  </li>
+                           <li>but the majority  </li>
+                        </ul>
+                     </div>
+                  </div>
+                  <div class="col-lg-2 col-md-4 col-sm-6">
+                     <div class="infoma">
+                        <h3>Contact Us</h3>
+                        <ul class="conta">
+                           <li><i class="fa fa-map-marker" aria-hidden="true"></i>15 A, Kailash Bose Street, Kolkata 700006
+                           </li>
+                           <li><i class="fa fa-volume-control-phone" aria-hidden="true"></i>+91 9051095736</li>
+                           <li> <i class="fa fa-envelope" aria-hidden="true"></i><a href="Javascript:void(0)"> hridayaminfo@gmail.com</a></li>
+                        </ul>
+                        <ul class="social_icon">
+                           <li><a href="https://www.facebook.com/HRIDAYAM.info"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                           <!-- <li><a href="Javascript:void(0)"><i class="fa fa-twitter" aria-hidden="true"></i></a></li> -->
+                           <!-- <li><a href="Javascript:void(0)"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li> -->
+                           <li><a href="https://www.instagram.com/hridayaminfo?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i class="fa fa-instagram" aria-hidden="false"></i></a></li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="copyright">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-md-12">
+                        <p>© 2024 All Rights Reserved. <a href="#"> Hridayam</a></p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
+      <!-- end footer -->
+      <!-- Javascript files-->
+      <script src="{% static 'js/jquery.min.js' %}"></script>
+      <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+      <script src="{% static 'js/jquery-3.0.0.min.js' %}"></script>
+      <!-- sidebar -->
+      <script src="{% static 'js/jquery.mCustomScrollbar.concat.min.js' %}"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
+      <script src="{% static 'js/custom.js' %}"></script>
+      <script type="text/javascript">
+         baguetteBox.run('.tz-gallery');
+      </script>
+      <script type="text/javascript">
+         window.onscroll = function() {myFunction()};
+         
+         var header = document.getElementById("myHeader");
+         var sticky = header.offsetTop;
+         
+         function myFunction() {
+          if (window.pageYOffset > sticky) {
+            header.classList.add("sticky");
+          } else {
+            header.classList.remove("sticky");
+          }
+         }
+      </script>
+
+   <script>
+
+	$.fn.jQuerySimpleCounter = function( options ) {
+	    var settings = $.extend({
+	        start:  0,
+	        end:    100,
+	        easing: 'swing',
+	        duration: 400,
+	        complete: ''
+	    }, options );
+
+	    var thisElement = $(this);
+
+	    $({count: settings.start}).animate({count: settings.end}, {
+			duration: settings.duration,
+			easing: settings.easing,
+			step: function() {
+				var mathCount = Math.ceil(this.count);
+				thisElement.text(mathCount);
+			},
+			complete: settings.complete
+		});
+	};
+
+
+$('#number1').jQuerySimpleCounter({end: 12,duration: 3000});
+$('#number2').jQuerySimpleCounter({end: 55,duration: 3000});
+$('#number3').jQuerySimpleCounter({end: 359,duration: 2000});
+$('#number4').jQuerySimpleCounter({end: 246,duration: 2500});
+</script>
+
+</body>
+</html>

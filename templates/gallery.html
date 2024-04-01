@@ -1,0 +1,133 @@
+{% extends "base.html" %} 
+{% block title %}Gallery{% endblock %}
+{% load static %} 
+{% block content %}
+{% include "navbar.html" %}
+
+<div class="gallery">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="titlepage">
+          <h2>Our Gallery</h2>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="tz-gallery">
+      
+      <div class="row">
+        {% for items in gallery %}
+        {% if forloop.counter|divisibleby:2 %}
+        <div class="row">
+        <div class="col-md-4">
+          {% else %}
+          <div class="col-md-12">
+        {% comment %} <div class="row"> {% endcomment %}
+        
+
+          
+            {% endif %}
+            <div class="col-md-12 ma_bottom30">
+              <div class="lightbox">
+                <img src="{{ items.image1.url }}" alt="{{ items.name }}" />
+                <div class="view_main">
+                  <h3>{{ items.name }}</h3>
+                  <a class="view_btn" href="{{ items.image1.url }}"
+                    ><i class="fa fa-search-plus" aria-hidden="true"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12 ma_bottom30">
+              <div class="lightbox">
+                <img src="{{ items.image2.url }}" alt="{{ items.name }}" />
+                <div class="view_main">
+                  <h3>{{ items.name }}</h3>
+                  <a class="view_btn" href="{{ items.image2.url }}"
+                    ><i class="fa fa-search-plus" aria-hidden="true"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            {% if forloop.counter|divisibleby:2 %}
+          </div>
+        </div>
+        {% else %}
+          {% comment %} </div> {% endcomment %}
+        </div>
+        {% endif %}
+        {% endfor %}
+        {% comment %} <div class="col-md-4">
+          <div class="row">
+            <div class="col-md-12 ma_bottom30">
+              <div class="lightbox">
+                <img src="{{ items.image.url }}" alt="Bridge" />
+                <div class="view_main">
+                  <h3>Couple</h3>
+                  <a class="view_btn" href="{{ items.image.url }}"
+                    ><i class="fa fa-search-plus" aria-hidden="true"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12 ma_bottom30">
+              <div class="lightbox">
+                <img src="images/CD3_2245 (1).webp" alt="Bridge" />
+                <div class="view_main">
+                  <h3>Couple</h3>
+                  <a class="view_btn" href="images/_J2A1702 1.webp"
+                    ><i class="fa fa-search-plus" aria-hidden="true"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> {% endcomment %}
+
+        {% comment %}
+        <div class="col-md-4">
+          <div class="row">
+            <div class="col-md-12 ma_bottom30">
+              <div class="lightbox">
+                <img src="images/J2A1692-1-1.webp" alt="Bridge" />
+                <div class="view_main">
+                  <h3>Couple</h3>
+                  <a class="view_btn" href="images/_J2A1692 1-1.webp"
+                    ><i class="fa fa-search-plus" aria-hidden="true"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12 ma_bottom30">
+              <div class="lightbox">
+                <img src="images/CD3_2296.webp" alt="Bridge" />
+                <div class="view_main">
+                  <h3>Couple</h3>
+                  <a class="view_btn" href="images/CD3_2296.webp"
+                    ><i class="fa fa-search-plus" aria-hidden="true"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endcomment %} {% comment %}
+        <div class="col-md-12">
+          <a class="read_more" href="about.html">View More</a>
+          <p class="text_align_center">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe
+            asperiores similique ab ipsa sint reprehenderit itaque magnam
+            exercitationem, eligendi numquam necessitatibus aliquam quidem magni
+            eius accusantium quas nostrum dolorem omnis!
+          </p>
+        </div>
+        {% endcomment %}
+      </div>
+    </div>
+    
+  </div>
+</div>
+<!-- end gallery -->
+{% endblock %}

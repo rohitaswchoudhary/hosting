@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'contact.css' %}">
+
+
+{% block title%}Contact{%endblock%}
+
+{% block content %}
+{% include "navbar.html" %}
+<!-- contact -->
+
+<div class="contact">
+   <div class="container-fluid">
+      <div class="row ">
+         <div class="col-md-12">
+            <div class="titlepage text_align_center">
+               <h2>Contact Us</h2>
+            </div>
+         </div>
+         <div class="col-md-6">
+            <div class="mapimg">
+               <figure><img src="{% static "images/hridayam-Logo-2.png" %}" alt="#" width="50%" height="30%"/></figure>
+            </div>
+         </div>
+         
+
+         <div class="col-md-6">
+            <form action="{% url "contact" %}" method="post">
+               {% csrf_token %}
+               {% for field in form %}
+              <div class="fieldWrapper">
+                {{ field.errors }}
+                {{ field.label_tag }} {{ field }}
+              </div>
+              {% endfor %}
+               <input type="submit" value="Submit">
+            </form>
+         </div>
+      </div>
+   </div>
+</div>
+{% endblock %}

@@ -1,0 +1,320 @@
+{% extends "base.html" %}
+{% block title %}|Wedding photography| Pre-wedding| Post wedding| Baby shoots{% endblock %}
+{% load static %}
+
+{% block content %}
+{% for items in contents %}
+   <!-- body -->
+   <body class="main-layout">
+      <div class="loader_bg">
+         <div class="loader"><img src="{% static 'images/loading.gif' %}" alt="#"/></div>
+      </div>
+
+      {% include "popup.html"%}
+      <!-- top -->
+      
+      <div class="full_bg" style="background: url({{ items.hero_image.url}});">        
+         <!-- header inner -->
+         <div class="top_section">
+            <div class="container-fluid">
+               <div class="row">
+                  <div class=" col-md-2 col-sm-3 col logo_section">
+                     <div class="full">
+                        <div class="center-desk">
+                           <div class="logo">
+                              <a href="{% url "home" %}"><img src="{% static 'images/hridayam-Logo-2.png' %}" alt="#" width="40%" height="25%" /></a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- end header inner -->
+         <!-- end header -->
+         <div class="slider_main">
+            <div class="container-fluid">
+               <div class="row">
+                  <div class="col-md-8">
+                     <!-- carousel code -->
+                     <div id="carouselExampleIndicators" class="carousel slide">
+                        <ol class="carousel-indicators">
+                           <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                           <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                           <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                           <!-- first slide -->
+                           <div class="carousel-item active">
+                              <div class="carousel-caption d-md-block cuplle">
+                                 <h3 data-animation="animated bounceInLeft">
+                                    <u>Hridayam</u> 
+                                 </h3>
+                                 <h3 data-animation="animated bounceInLeft">
+                                    Where Every Frame Tells a Story
+                                 </h3>
+                                 <h3 data-animation="animated bounceInLeft">
+                                    
+                                 </h3>
+                                 <button class="btn btn-primary  read_more whitebg" data-animation="animated bounceInLeft">Contact Us</button>
+                              </div>
+                           </div>
+                           <!-- second slide -->
+                           <div class="carousel-item">
+                              <div class="carousel-caption d-md-block cuplle">
+                                 <h3 data-animation="animated bounceInLeft">
+                                    <u>Hridayam</u>
+                                 </h3>
+                                 <h3 data-animation="animated bounceInLeft">
+                                    Capturing Love's Timeless Moments
+                                 </h3>
+                                 <h3 data-animation="animated bounceInLeft">
+                                    
+                                 </h3>
+                                 <button class="btn btn-primary  read_more whitebg" data-animation="animated bounceInLeft">Contact Us</button>
+                              </div>
+                           </div>
+                           <!-- third slide -->
+                           <div class="carousel-item">
+                              <div class="carousel-caption d-md-block cuplle">
+                                 <h3 data-animation="animated bounceInLeft">
+                                    <u>Hridayam</u>
+                                 </h3>
+                                 <h3 data-animation="animated bounceInLeft">
+                                    CINEMATIC WEDDING VIDEO 
+                                 </h3>
+                                 <h3 data-animation="animated bounceInLeft">
+                                    
+                                 </h3>
+                                 <button class="btn btn-primary  read_more whitebg" data-animation="animated bounceInLeft">Contact Us</button>
+                              </div>
+                           </div>
+                        </div>
+                        
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- end banner -->
+      {% include "navbar.html" %}
+      <!-- about -->
+      <div class="about">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="titlepage text_align_center">
+                     <h2>About Us</h2>
+                  </div>
+               </div>
+               <div class="col-md-10 offset-md-1">
+                  <div class="about_img text_align_center">
+                     <figure><img src="{{items.about_img.url}}" alt="#"/></figure>
+                  </div>
+               </div>
+               <div class="col-md-8 offset-md-2">
+                  <div class="about_img text_align_center">
+                     <p>Since our inception in 2016 with a humble team of three, Hridyam Photography has evolved into a thriving family, capturing cherished moments across a spectrum of occasions—weddings, birthdays, commercial shoots, portfolios, cinematic videos, anniversaries, and beyond. While our roots lie in Kolkata, our clientele spans the entire country. At Hridyam, we take pride in our distinctive and personalized approach to every event we undertake. With a dedicated team assigned to each assignment, we ensure the best results for your memorable moments. Trust us to turn your special occasions into timeless memories. That’s Why Our tagline is “ The Soul Story”
+                     </p>
+                     <a class="read_more" href="about.html">About More</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- end about -->
+      <!-- couple -->
+      <div class="couple">
+         <div class="container-fluid">
+            <div class="row">
+               <div class="col-md-7">
+                  <div class="titlepage text_align_left">
+                     <h2>Our introduction</h2>
+                     <p>At Hridyam Photography, our clients' joy is our ultimate reward. We have had the privilege of capturing and immortalizing their most cherished moments, ranging from the blissful union of marriage to the celebration of anniversaries, baby showers, and more. The heartfelt gratitude and thanks expressed by our clients stand as a testament to the trust they place in us to encapsulate their precious memories. Join the ranks of our satisfied clients and let us turn your special moments into everlasting treasures.
+                     </p>
+                     <a class="read_more whitebg" href="Javascript:void(0)">See More</a>
+                  </div>
+               </div>
+               <div class="col-md-5">
+                  <div class="doi">
+                     <figure><img src="{{items.about_img.url}}" alt="#"/></figure>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- couple -->
+      <!-- gallery -->
+      <div class="gallery">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="titlepage">
+                     <h2>Our Gallery</h2>
+                  </div>
+               </div>
+            </div>
+            {% for items in home_gallery %}
+            <div class="tz-gallery">
+               <div class="row">
+                  <div class="col-md-4">
+                     <div class="row">
+                        <div class="col-md-12 ma_bottom30">
+                           <div class="lightbox">
+                              <img src="{{items.image.url}}" alt="Bridge">
+                              <div class="view_main">
+                                 <h3>Couple</h3>
+                                 <a class="view_btn" href="{{items.image.url}}"><i class="fa fa-search-plus" aria-hidden="true"></i></a>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-md-12 ma_bottom30">
+                           <div class="lightbox">
+                              <img src="{{items.image1.url}}" alt="Bridge">
+                              <div class="view_main">
+                                 <h3>Couple</h3>
+                                 <a class="view_btn" href="{{items.image1.url}}"><i class="fa fa-search-plus" aria-hidden="true"></i></a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-md-4">
+                     <div class="row">
+                        <div class="col-md-12 ma_bottom30">
+                           <div class="lightbox">
+                              <img src="{{items.image2.url}}" alt="Bridge">
+                              <div class="view_main">
+                                 <h3>Couple</h3>
+                                 <a class="view_btn" href="{{items.image2.url}}"><i class="fa fa-search-plus" aria-hidden="true"></i></a>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-md-12 ma_bottom30">
+                           <div class="lightbox">
+                              <img src="{{items.image3.url}}" alt="Bridge">
+                              <div class="view_main">
+                                 <h3>Couple</h3>
+                                 <a class="view_btn" href="{{items.image3.url}}"><i class="fa fa-search-plus" aria-hidden="true"></i></a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-md-4">
+                     <div class="row">
+                        <div class="col-md-12 ma_bottom30">
+                           <div class="lightbox">
+                              <img src="{{items.image4.url}}" alt="Bridge">
+                              <div class="view_main">
+                                 <h3>Couple</h3>
+                                 <a class="view_btn" href="{{items.image4.url}}"><i class="fa fa-search-plus" aria-hidden="true"></i></a>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-md-12 ma_bottom30">
+                           <div class="lightbox">
+                              <img src="{{items.image5.url}}" alt="Bridge">
+                              <div class="view_main">
+                                 <h3>Couple</h3>
+                                 <a class="view_btn" href="{{items.image5.url}}"><i class="fa fa-search-plus" aria-hidden="true"></i></a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-md-12">
+                     <a class="read_more" href="about.html">View More</a>
+                     {% comment %} <p class="text_align_center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe asperiores similique ab ipsa sint reprehenderit itaque magnam exercitationem, eligendi numquam necessitatibus aliquam quidem magni eius accusantium quas nostrum dolorem omnis!</p> {% endcomment %}
+                  </div>
+               </div>
+            </div>
+            {% endfor %}
+         </div>
+      </div>
+      <!-- end gallery -->
+      <!-- couple -->
+      <div class="couple">
+         <div class="container-fluid">
+            <div class="row">
+               <div class="col-md-7">
+                  <div class="titlepage text_align_left">
+                     <h2>Our Footprints</h2>
+                     <div id="projectFacts" class="sectionClass">
+                        <div class="fullWidth eight columns">
+                            <div class="projectFactsWrap ">
+                                <div class="item wow fadeInUpBig animated animated" data-number="0" style="visibility: visible;">
+                                    <i class="fa fa-heart"></i>
+                                    <p id="number1" class="number">{{items.no_weddings}}</p>
+                                    <span></span>
+                                    <p>Weddings</p>
+                                </div>
+                                <div class="item wow fadeInUpBig animated animated" data-number="0" style="visibility: visible;">
+                                    <i class="fa fa-smile-o"></i>
+                                    <p id="number2" class="number">{{items.no_happyclient}}</p>
+
+                                    <span></span>
+                                    <p>Happy clients</p>
+                                </div>
+                                <div class="item wow fadeInUpBig animated animated" data-number="0" style="visibility: visible;">
+                                    <i class="fa fa-video-camera"> </i>
+                                    <p id="number3" class="number">{{items.no_videos}}</p>
+                                    <span></span>
+                                    <p>VIDEOS PRODUCED</p>
+                                </div>
+                                <div class="item wow fadeInUpBig animated animated" data-number="0" style="visibility: visible;">
+                                    <i class="fa fa-camera"></i>
+                                    <p id="number4" class="number">{{items.no_photos}}</p>
+                                    <span></span>
+                                    <p>PHOTOS DELIVERED</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <a class="read_more whitebg" href="Javascript:void(0)">See More</a>
+                  </div>
+               </div>
+               <div class="col-md-5">
+                  <div class="doi">
+                     <figure><img src="{{items.hero_image.url}}" alt="#"/></figure>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+<!-- couple -->
+{% comment %} <script>
+
+	$.fn.jQuerySimpleCounter = function( options ) {
+	    var settings = $.extend({
+	        start:  0,
+	        end:    100,
+	        easing: 'swing',
+	        duration: 400,
+	        complete: ''
+	    }, options );
+
+	    var thisElement = $(this);
+
+	    $({count: settings.start}).animate({count: settings.end}, {
+			duration: settings.duration,
+			easing: settings.easing,
+			step: function() {
+				var mathCount = Math.ceil(this.count);
+				thisElement.text(mathCount);
+			},
+			complete: settings.complete
+		});
+	};
+
+
+$('#number1').jQuerySimpleCounter({end: {{items.no_weddings}}, duration: 3000});
+$('#number2').jQuerySimpleCounter({end: {{items.no_photos}},duration: 3000});
+$('#number3').jQuerySimpleCounter({end: 359,duration: 2000});
+$('#number4').jQuerySimpleCounter({end: 246,duration: 2500});
+</script> {% endcomment %}
+      
+{% endfor %}
+{% endblock %}
